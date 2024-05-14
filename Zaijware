@@ -295,5 +295,20 @@ coroutine.wrap(TKVUMP_fake_script)()
 end)
 
 MainSection:NewButton("ESP", "Highlights Every Player In The Game", function()
-  local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostDuckyy/ESP-Library/main/Kiriot22/source.lua"))()
+  for i,v in pairs(game.Players:GetPlayers()) do 
+    if v.Character then 
+        Instance.new("Highlight",v.Character)
+    end
+    v.Character.Changed:Connect(function()
+        task.wait(0.1)
+        Instance.new("Highlight",v.Character)
+    end)
+end
+
+game.Players.PlayerAdded:Connect(function(v)
+    v.Character.Changed:Connect(function()
+        task.wait(0.1)
+        Instance.new("Highlight",v.Character)
+    end)
+end)
 end)
