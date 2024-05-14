@@ -40,60 +40,7 @@ end)
 
 end)
 end)
- 
-MainSection:NewButton("Levitate", "Press X And Spam Jump Till Hight Reached", function()
-    local loadstring = loadstring or load
- 
-loadstring([[
-local UserInputService = game:GetService("UserInputService")
- 
--- Set the levitation height (in studs)
-local levitationHeight = 10
- 
--- Set the key to toggle levitation
-local levitationKey = Enum.KeyCode.X
- 
--- Variable to keep track of levitation state
-local isLevitating = false
- 
--- Function to handle levitation
-local function levitate()
-    local character = game.Players.LocalPlayer.Character
-    if character then
-        local humanoid = character:FindFirstChildOfClass("Humanoid")
-        if humanoid then
-            humanoid.PlatformStand = true
-            humanoid.HipHeight = levitationHeight
-            isLevitating = true)
-        end
-    end
-end
- 
--- Function to handle returning to normal
-local function returnToNormal()
-    local character = game.Players.LocalPlayer.Character
-    if character then
-        local humanoid = character:FindFirstChildOfClass("Humanoid")
-        if humanoid then
-            humanoid.PlatformStand = false
-            humanoid.HipHeight = 0
-            isLevitating = false
-        end
-    end
-end
- 
--- Listen for key press to toggle levitation
-UserInputService.InputBegan:Connect(function(input)
-    if input.KeyCode == levitationKey then
-        if not isLevitating then
-            levitate()
-        else
-            returnToNormal()
-        end
-    end
-end)
-]])()
-end)
+
 
 MainSection:NewButton("Fly", "Gui Is Mobile Supported", function()
     -- Made By Zaijhit
