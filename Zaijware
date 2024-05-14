@@ -7,7 +7,38 @@ local MainSection = Main:NewSection("Main")
  
  
 MainSection:NewButton("Speed", "Reset To Stop.", function()
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+    -- Define the speed increment and decrement values
+local speedIncrement = 50
+local speedDecrement = 16
+
+-- Get the player
+local player = game.Players.LocalPlayer
+
+-- Define a function to increase speed
+local function increaseSpeed()
+    player.Character.Humanoid.WalkSpeed = player.Character.Humanoid.WalkSpeed + speedIncrement
+end
+
+-- Define a function to decrease speed
+local function decreaseSpeed()
+    player.Character.Humanoid.WalkSpeed = player.Character.Humanoid.WalkSpeed - speedDecrement
+end
+
+-- Bind the "E" key to increase speed
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.E then
+        increaseSpeed()
+    end
+end)
+
+-- Bind the "Q" key to decrease speed
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.Q then
+        decreaseSpeed()
+    end
+end)
+
+end)
 end)
  
 MainSection:NewButton("Levitate", "Press X And Spam Jump Till Hight Reached", function()
