@@ -293,3 +293,7 @@ local function TKVUMP_fake_script() -- Frame.Drag Gui
 end
 coroutine.wrap(TKVUMP_fake_script)()
 end)
+
+MainSection:NewButton("ButtonText", "ButtonInfo", function()
+    local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostDuckyy/ESP-Library/main/Kiriot22/source.lua"))()
+end)
