@@ -64,8 +64,8 @@ local function levitate()
         if humanoid then
             humanoid.PlatformStand = true
             humanoid.HipHeight = levitationHeight
-            isLevitating = true
-        end)
+            isLevitating = true)
+        end
     end
 end
  
