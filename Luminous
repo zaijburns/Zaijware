@@ -283,6 +283,7 @@ MainSection:NewButton("ESP", "Highlights Every Player In The Game", function()
     end)
 end)
 
+
 Section:NewButton("ButtonText", "ButtonInfo", function()
     Tab3:Button("Trash Talk (J)",function(bool)
     local plr = game.Players.LocalPlayer
