@@ -282,3 +282,63 @@ MainSection:NewButton("ESP", "Highlights Every Player In The Game", function()
         end)
     end)
 end)
+
+Section:NewButton("ButtonText", "ButtonInfo", function()
+    Tab3:Button("Trash Talk (J)",function(bool)
+    local plr = game.Players.LocalPlayer
+repeat wait() until plr.Character
+local char = plr.Character
+
+local garbage = {
+    "ur bad";
+    "sonney boy";
+    "ez";
+    "my seedling";
+    "seed";
+    "sit son";
+    "acc so bad";
+    "LOL";
+    "js hopped on";
+    "xd";
+    "its ok dw";
+    "u lose";
+    "stop trying";
+    "how r u this bad";
+    "leave";
+    "no skill";
+    "so sad.";
+    "bad";
+    "ur nothing";
+    "lol";
+    "ur acc horrid";
+    "so bad";
+    "ur salty";
+    "salty boy";
+    "nn";
+    "cry";
+    "ur dog";
+    "cry more";
+    "hahaha I won";
+    "no one likes u";
+    "run 1s seed";
+    "smd";
+    "maybe next time bro!";
+    "just quit broski";
+    "rodent";
+    "LOLOLOl";
+    "ur assi";
+    "just quit";
+    "rahhh";
+    "bro js got finished";
+    "its okay man";
+
+
+
+
+
+
+
+
+
+}
+end)
